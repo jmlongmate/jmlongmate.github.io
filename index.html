@@ -30,6 +30,34 @@
             font-size: 24px;
         }
 
+        /* Sidebar Styling */
+        nav {
+            position: fixed;
+            top: 60px; /* Below the header */
+            left: 0;
+            width: 200px;
+            height: calc(100% - 60px); /* Full height minus the header */
+            background-color: #222;
+            color: white;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+      
         /* Main Content Styling */
         .content {
             margin: 80px 0 0 220px; /* Offset for header and nav */
@@ -50,9 +78,9 @@
       
     <nav>
       <ul>
-        <a href="name">julia</a>
-        <a href="index.html">main</a>
-        <a href="cv.html">cv</a>
+        <li><a href="name">julia</a></li>
+        <li><a href="index.html">main</a></li>
+        <li><a href="cv.html">cv</a></li>
       </ul>
     </nav>
         
