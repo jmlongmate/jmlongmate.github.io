@@ -9,8 +9,16 @@
         body, html {
             margin: 0;
             padding: 0;
-            <!-- font-family: Arial, sans-serif; -->
+            font-family: 'Courier New', monospace;
         }
+
+        /* Wrapper to Handle Layout */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure wrapper spans the full height of the page */
+        }
+
       
         /* Header Styling */
         header {
@@ -27,7 +35,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 34px;
         }
 
         /* Sidebar Styling */
@@ -39,7 +47,7 @@
             height: calc(100% - 60px); /* Full height minus the header */
             background-color: #222;
             color: white;
-            padding-top: 20px;
+            padding: 20px 20px 0 10px; /* Space inside the nav */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -49,7 +57,7 @@
             text-decoration: none;
             margin: 10px 0;
             padding: 10px;
-            text-align: left;
+            text-align: right;
             transition: background 0.3s;
         }
 
@@ -60,38 +68,47 @@
       
         /* Main Content Styling */
         .content {
-            margin: 80px 0 0 220px; /* Offset for header and nav */
+          flex: 1;
+            margin-top: 80px; /* Below the fixed header */
+            margin-left: 220px; /* To the right of the fixed sidebar */
             padding: 20px;
         }
 
-
-
-
+        /* Footer Styling */
+        footer {
+            margin-left: 220px; /* Align footer to the main content */
+            padding: 10px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
     </style>
   </head>
   
   <body>
-    <!-- Main header that is used across all the pages of the website -->
-    <header>
-      <h1 id="head">jmlongmate</h1>
-    </header>
+    <div class="wrapper">
+      <!-- Main header that is used across all the pages of the website -->
+      <header>
+        <h1 id="head">julia m. longmate</h1>
+      </header>
+        
+      <nav>
+          <a href="index.html">main</a>
+          <a href="research.html">research</a>
+          <a href="pubs.html">publications</a>
+          <a href="cv.html">cv</a>
+        
+      </nav>
+          
+      <main class="content">
+        <article>
+          <h3>You have arrived. Welcome.</h3>
+          <p>Explore to see more.</p>
+        </article>
+      </main>
       
-    <nav>
-        <a>julia</a>
-        
-        <a href="index.html">main</a>
-        
-        <a href="cv.html">cv</a>
-    </nav>
-        
-    <main>
-      <article>
-        <h3>You have arrived. Welcome.</h2>
-      </article>
-    </main>
-    
-    <footer>
-      <p>sup bb</p>
-    </footer>
+      <footer>
+        <p>sup bb</p>
+      </footer>
+    </div>
   </body>
 </html>
