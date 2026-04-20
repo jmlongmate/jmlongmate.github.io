@@ -133,7 +133,7 @@ a {
   min-height: min(360px, 48vh);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -462,7 +462,7 @@ button.project-test-panel.is-active .eyebrow {
 .project-feature-copy {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 360px;
   padding: clamp(28px, 5vw, 56px);
   border-right: 2px solid var(--rule);
@@ -519,7 +519,7 @@ button.project-test-panel.is-active .eyebrow {
 .publication-heading {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-width: 0;
   padding: clamp(28px, 5vw, 56px);
 }
@@ -607,7 +607,7 @@ button.project-test-panel.is-active .eyebrow {
 .cv-pdf-panel {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-width: 0;
   padding: clamp(28px, 5vw, 56px);
 }
