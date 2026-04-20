@@ -14,31 +14,23 @@
         <div class="site-title-block" aria-hidden="true"></div>
       </div>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.html" aria-current="page">CV</a>
+        <a class="nav-cv" href="cv.html" aria-current="page">CV</a>
+        <a class="nav-home" href="index.html">Home</a>
+        <a class="nav-projects" href="projects.html">Projects</a>
+        <a class="nav-publications" href="publications.html">Publications</a>
       </nav>
     </header>
 
     <main>
-      <section class="cv-grid section-block" aria-labelledby="contact-heading">
+      <section class="cv-grid section-block" aria-label="CV contact and download">
         <div class="cv-contact">
-          <p class="eyebrow">Curriculum vitae</p>
-          <h1 id="contact-heading">Contact</h1>
-          <div class="text-column">
-            <p>
-              jmlongmate at berkeley dot edu
-            </p>
-          </div>
+          <p>email: jmlongmate at berkeley dot edu</p>
         </div>
         <div class="cv-main-divider" aria-hidden="true"></div>
-        <div class="cv-pdf-panel" aria-labelledby="cv-heading">
-          <p class="section-number">CV</p>
-          <h1 id="cv-heading">CV</h1>
-          <p class="cv-status">PDF coming soon</p>
-          <!-- Add a file at <code>assets/julia-longmate-cv.pdf</code>, then replace
-            this status with a direct download link. -->
+        <div class="cv-pdf-panel">
+          <a class="cv-download" href="assets/JuliaLongmateCV.pdf" download>
+            download cv
+          </a>
         </div>
       </section>
     </main>

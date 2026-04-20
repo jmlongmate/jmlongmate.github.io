@@ -102,8 +102,23 @@ a {
   color: var(--paper);
 }
 
-.site-nav a[aria-current="page"] {
+.site-nav .nav-home[aria-current="page"] {
   background: #5e7f78;
+  color: var(--paper);
+}
+
+.site-nav .nav-projects[aria-current="page"] {
+  background: #073c42;
+  color: var(--paper);
+}
+
+.site-nav .nav-publications[aria-current="page"] {
+  background: #6d5a7a;
+  color: var(--paper);
+}
+
+.site-nav .nav-cv[aria-current="page"] {
+  background: #9a6b56;
   color: var(--paper);
 }
 
@@ -334,8 +349,7 @@ h2 {
 }
 
 .interest-card span,
-.feature-links span,
-.cv-status {
+.feature-links span {
   display: block;
   margin-bottom: 18px;
   color: var(--muted);
@@ -401,7 +415,7 @@ button.project-test-panel {
 button.project-test-panel:hover,
 button.project-test-panel:focus-visible,
 button.project-test-panel.is-active {
-  background: #5e7f78;
+  background: #073c42;
   color: var(--paper);
 }
 
@@ -607,24 +621,30 @@ button.project-test-panel.is-active .eyebrow {
 .cv-pdf-panel {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   min-width: 0;
   padding: clamp(28px, 5vw, 56px);
+  text-align: center;
 }
 
-.cv-contact h1,
-.cv-pdf-panel h1 {
-  margin: 12px 0 0;
-  font-size: clamp(2.592rem, 9.72vw, 7.29rem);
+.cv-contact p,
+.cv-download {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 0.86;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
-.cv-contact .text-column,
-.cv-pdf-panel p:not(.section-number) {
-  max-width: 680px;
-  margin-top: 24px;
+.cv-download:hover,
+.cv-download:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .cv-main-divider {
@@ -653,7 +673,6 @@ code {
   padding: 18px clamp(18px, 4vw, 48px);
   background: var(--paper);
   color: var(--ink);
-  border-top: 2px solid #9a6b56;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.78rem;
   text-transform: uppercase;
