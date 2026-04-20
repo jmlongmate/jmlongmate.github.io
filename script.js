@@ -3,6 +3,7 @@ const gridPreviewCode = document.querySelector("[data-grid-preview-code]");
 const gridPreviewTitle = document.querySelector("[data-grid-preview-title]");
 const gridPreviewDescription = document.querySelector("[data-grid-preview-description]");
 const gridPreviewImage = document.querySelector("[data-grid-preview-image]");
+const gridPreviewCredit = document.querySelector("[data-grid-preview-credit]");
 
 function selectGridProject(tile) {
   if (!tile || !gridPreviewCode || !gridPreviewTitle || !gridPreviewDescription) {
@@ -16,7 +17,11 @@ function selectGridProject(tile) {
   gridPreviewTitle.textContent = tile.dataset.gridTitle || "";
   gridPreviewDescription.textContent = tile.dataset.gridDescription || "";
   if (gridPreviewImage) {
-    gridPreviewImage.dataset.tone = tile.dataset.gridTone || "terrain";
+    gridPreviewImage.style.setProperty("--project-image", `url("${tile.dataset.gridImage || ""}")`);
+    gridPreviewImage.dataset.imageFit = tile.dataset.gridImageFit || "cover";
+  }
+  if (gridPreviewCredit) {
+    gridPreviewCredit.textContent = tile.dataset.gridCredit || "";
   }
 }
 

@@ -156,7 +156,7 @@ a {
 .page-intro h1 {
   max-width: 920px;
   margin: 14px 0 0;
-  font-size: clamp(2.592rem, 9.72vw, 7.29rem);
+  font-size: clamp(2.0736rem, 7.776vw, 5.832rem);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 0.86;
@@ -277,7 +277,7 @@ a {
 .home-title h1 {
   margin: 0;
   max-width: 12ch;
-  font-size: clamp(2.592rem, 9.72vw, 7.29rem);
+  font-size: clamp(2.0736rem, 7.776vw, 5.832rem);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 0.94;
@@ -441,30 +441,33 @@ button.project-test-panel.is-active .eyebrow {
 }
 
 .project-test-image {
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 100%;
-  background:
-    linear-gradient(135deg, rgba(24, 21, 19, 0.35), rgba(24, 21, 19, 0) 44%),
-    linear-gradient(145deg, #c8d9c3 0%, #f5efe6 45%, #5e7f78 100%);
+  background-color: #f5efe6;
+  background-image: var(--project-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.project-test-image[data-tone="uncertainty"] {
-  background:
-    linear-gradient(135deg, rgba(24, 21, 19, 0.34), rgba(24, 21, 19, 0) 48%),
-    linear-gradient(145deg, #e8cfd4 0%, #dfd7ec 48%, #446f78 100%);
+.project-test-image[data-image-fit="contain"] {
+  background-size: contain;
 }
 
-.project-test-image[data-tone="scale"] {
-  background:
-    linear-gradient(135deg, rgba(24, 21, 19, 0.34), rgba(24, 21, 19, 0) 48%),
-    repeating-linear-gradient(90deg, #eadcc8 0 34px, #c8d9c3 34px 68px, #6d5a7a 68px 102px);
-}
-
-.project-test-image[data-tone="storylines"] {
-  background:
-    linear-gradient(135deg, rgba(24, 21, 19, 0.34), rgba(24, 21, 19, 0) 48%),
-    linear-gradient(145deg, #9a6b56 0%, #d7c1d8 50%, #3f6f63 100%);
+.project-image-credit {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  padding: 4px 6px;
+  background: rgba(245, 239, 230, 0.78);
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .project-feature-right {
@@ -484,7 +487,7 @@ button.project-test-panel.is-active .eyebrow {
   background: #f5efe6;
 }
 
-.project-feature-copy h1 {
+.project-feature-copy h2 {
   max-width: 780px;
   margin: 12px 0 0;
   font-size: clamp(2.1rem, 5vw, 5.2rem);
@@ -539,11 +542,21 @@ button.project-test-panel.is-active .eyebrow {
 }
 
 .publication-heading h1 {
-  margin: 12px 0 0;
-  font-size: clamp(2.592rem, 9.72vw, 7.29rem);
+  margin: 0;
+  font-size: clamp(2.0736rem, 7.776vw, 5.832rem);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 0.86;
+}
+
+.publication-orcid {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1.12rem, 2.2vw, 1.6rem);
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .publication-main-divider {
@@ -866,7 +879,7 @@ code {
 
   .hero h1,
   .page-intro h1 {
-    font-size: 3.05rem;
+    font-size: 2.44rem;
   }
 
   .site-footer {
