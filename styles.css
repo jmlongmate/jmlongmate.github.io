@@ -169,16 +169,9 @@ a {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 2px minmax(0, 1fr);
   max-width: var(--max-width);
   margin: 0 auto;
-  background-image: linear-gradient(
-    to right,
-    transparent calc(50% - 1px),
-    var(--rule) calc(50% - 1px),
-    var(--rule) calc(50% + 1px),
-    transparent calc(50% + 1px)
-  );
 }
 
 .home-split > * {
@@ -186,15 +179,25 @@ a {
   z-index: 1;
 }
 
-.home-hero {
-  background:
-    linear-gradient(
-      to right,
-      transparent calc(50% - 1px),
-      var(--rule) calc(50% - 1px),
-      var(--rule) calc(50% + 1px),
-      transparent calc(50% + 1px)
-    );
+.home-divider {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: stretch;
+  margin-block: calc(-1 * clamp(30px, 6vw, 72px));
+  background: var(--rule);
+  z-index: 2;
+}
+
+.hero .home-divider {
+  margin-top: calc(-1 * clamp(42px, 7vw, 84px));
+}
+
+.home-title {
+  grid-column: 1;
+}
+
+.home-copy {
+  grid-column: 3;
 }
 
 .home-hero::before {
@@ -239,26 +242,12 @@ a {
   background-color: transparent;
 }
 
-.home-interests.home-split {
-  background:
-    linear-gradient(
-      to right,
-      transparent calc(50% - 1px),
-      var(--rule) calc(50% - 1px),
-      var(--rule) calc(50% + 1px),
-      transparent calc(50% + 1px)
-    );
+.home-interests .home-copy {
+  grid-column: 1;
 }
 
-.home-explore {
-  background:
-    linear-gradient(
-      to right,
-      transparent calc(50% - 1px),
-      var(--rule) calc(50% - 1px),
-      var(--rule) calc(50% + 1px),
-      transparent calc(50% + 1px)
-    );
+.home-interests .home-title {
+  grid-column: 3;
 }
 
 .hero.home-split {
@@ -622,6 +611,32 @@ code {
     background-image: none;
   }
 
+  .home-hero::before,
+  .home-interests::before,
+  .home-explore::before {
+    display: none;
+  }
+
+  .home-divider {
+    display: none;
+  }
+
+  .home-title,
+  .home-copy,
+  .home-interests .home-title,
+  .home-interests .home-copy {
+    grid-column: 1;
+  }
+
+  .home-interests .home-title {
+    order: -1;
+    padding-left: 0;
+  }
+
+  .home-interests .home-copy {
+    padding-right: 0;
+  }
+
   .home-title {
     padding-right: 0;
   }
@@ -629,6 +644,15 @@ code {
   .home-copy {
     margin-top: 24px;
     padding-left: 0;
+  }
+
+  .home-hero .home-copy,
+  .home-interests .home-copy,
+  .home-explore .home-copy {
+    margin-right: calc(-1 * clamp(18px, 4vw, 48px));
+    margin-left: calc(-1 * clamp(18px, 4vw, 48px));
+    padding: 24px clamp(18px, 4vw, 48px);
+    background: #f5efe6;
   }
 
   .interest-grid,
