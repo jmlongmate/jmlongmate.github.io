@@ -108,7 +108,7 @@ a {
 }
 
 .site-nav .nav-projects[aria-current="page"] {
-  background: #073c42;
+  background: #12383d;
   color: var(--paper);
 }
 
@@ -415,7 +415,7 @@ button.project-test-panel {
 button.project-test-panel:hover,
 button.project-test-panel:focus-visible,
 button.project-test-panel.is-active {
-  background: #073c42;
+  background: #12383d;
   color: var(--paper);
 }
 
